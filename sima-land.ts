@@ -8,4 +8,5 @@ test('test', async ({ page }) => {
   await page.getByTestId('password-field').getByTestId('text-field:field').click();
   await page.getByTestId('password-field').getByTestId('text-field:field').fill('qa_test');
   await page.getByTestId('button').click();
+  await expect(page).toHaveURL(/.*intro/);
 });
